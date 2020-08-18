@@ -7,7 +7,7 @@ import json
 
 def get_news(keywords):
     keyword = 'q='+re.sub(r"\s+", ' ', keywords)+'&'
-    url = ('https://newsapi.org/v2/everything?'+keyword+'from=2018-10-01&sortBy=popularity&apiKey=0484edc4a86c472a8b0ae8b4a4205f42')
+    url = ('https://newsapi.org/v2/everything?'+keyword+'from=2020-08-01&sortBy=popularity&apiKey='+newsApiKey)
     res = (requests.get(url)).json()["articles"]
     newsTitles = []
     for news in res:
